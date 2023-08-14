@@ -13,11 +13,6 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | RPT  |
-// |  TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | RET  |
-// | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ALT  |
-//                    | SPC | SYM | GUI |   |SHIFT| NUM  | DEL |
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &key_repeat
    &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
