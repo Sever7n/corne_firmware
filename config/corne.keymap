@@ -31,7 +31,7 @@
 
                 symbol_layer {
                         bindings = <
-   &trans &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCKP_NUMBER_T   &kp CARET &kp AMPS  &kp KP_MULTIPLY &none &none &trans
+   &trans &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &none &none &trans
    &trans &trans   &kp LBRC &kp LBKT &kp LPAR &kp BSLH    &kp PIPE  &kp RPAR  &kp RBKT        &kp RBKT &kp BSLH &trans
    &trans &kp KP_EQUAL   &kp KP_PLUS   &kp LT   &kp TILDE   &none      &none &kp FSLH  &kp GT        &kp MIKP_NUMBER_US &kp UKP_NUMBER_DER &trans
                              &trans &trans   &trans   &trans   &trans    &trans
