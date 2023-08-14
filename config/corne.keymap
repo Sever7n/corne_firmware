@@ -22,9 +22,9 @@
                 };
                 number_layer {
                         bindings = <
-   &trans    &kp FN1  &kp FN2  &kp FN3 &kp FN4   &kp FN5 &kp FN6 &kp FN7 &kp FN8 &kp FN9 &kp FN10 &trans
+   &trans    &kp F1  &kp F2  &kp F3 &kp F4   &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &trans
    &trans    &kp N1   &kp N2   &kp N3  &kp N4    &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &trans
-   &trans    &kp FN11 &kp FN12 &none   &none     &none   &none   &none   &none   &none   &none    &trans
+   &trans    &kp F11 &kp F12 &none   &none     &none   &none   &none   &none   &none   &none    &trans
                          &trans &trans &trans    &trans  &trans   &trans
                         >;
                 };
