@@ -51,7 +51,7 @@
    &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans   &LEFT  &DOWN  &UP    &RIGHT &trans &trans
    &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-                        &trans &trans &trans   &trans &trans &trans
+                        &trans &trans &trans   &trans &trans &mo DEFAULT
                         >;
                 };
         };
