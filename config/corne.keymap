@@ -48,9 +48,9 @@
 
                 nav_layer {
                         bindings = <
-   &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-   &trans &trans &trans &trans &trans &trans   &LEFT  &DOWN  &UP    &RIGHT &trans &trans
-   &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans &trans    &trans &trans
+   &trans &trans &trans &trans &trans &trans   &kp LEFT  &kp DOWN  &kp UP &kp RIGHT &trans &trans
+   &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans &trans    &trans &trans
                         &trans &trans &trans   &trans &trans &mo DEFAULT
                         >;
                 };
