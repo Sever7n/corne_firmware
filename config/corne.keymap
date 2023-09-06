@@ -11,18 +11,39 @@
 #define DEFAULT 0
 #define NUMBERS 1
 #define SYMBOL  2
-#define NAV     3
+#define NAV1    3
+#define NAV2    4
+#define GAM     5
 
-#define ARROWS &lt NAV F
+#define ARROWS  &lt NAV1 F
+#define PG      &lt NAV2 D
 
 / {
+        combos {
+            compatible = "zmk,keymap";
+
+            combo_boot {
+                timeout-ms = <50>;   
+                key-positions = <0 11>;
+                layers = <GAM>;
+                bindings = <&bootloader>;
+            };
+
+            combo_gaming {
+                timeout-ms = <50>;   
+                key-positions = <38 39>;
+                layers = <DEFAULT GAM>;
+                bindings = <&tog GAM>;
+            };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E  &kp R &kp T  &kp Y &kp U  &kp I     &kp O   &kp P    &key_repeat
-   &kp TAB   &kp A &kp S &kp D  ARROWS &kp G  &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
+   &kp TAB   &kp A &kp S PG     ARROWS &kp G  &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
    &sk LCTRL &kp Z &kp X &kp C  &kp V &kp B  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &sk RALT
              &sk LGUI &kp SPACE &sl SYMBOL   &sl NUMBERS &sk LSHIFT &kp BKSP
                         >;
@@ -40,13 +61,13 @@
                 symbol_layer {
                         bindings = <
    &trans &kp EXCL     &kp AT      &kp HASH &kp DLLR  &kp PRCNT &kp CARET &kp AMPS  &kp KP_MULTIPLY  &none     &none     &trans
-   &trans &kp SQT      &kp LBRC    &kp LBKT &kp LPAR  &kp BSLH  &kp PIPE  &kp RPAR  &kp RBKT         &kp RBKT  &kp DQT   &trans
+   &trans &kp SQT      &kp LBRC    &kp LBKT &kp LPAR  &kp BSLH  &kp PIPE  &kp RPAR  &kp RBKT         &kp RBRC  &kp DQT   &trans
    &trans &kp KP_EQUAL &kp KP_PLUS &kp LT   &kp TILDE &none     &none     &kp FSLH  &kp GT           &kp MINUS &kp UNDER &trans
                              &trans &trans   &trans   &trans   &trans    &trans
                         >;
                 };
 
-                nav_layer {
+                nav_layer_a {
                         bindings = <
    &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans &trans    &trans &trans
    &trans &trans &trans &trans &trans &trans   &kp LEFT  &kp DOWN  &kp UP &kp RIGHT &trans &trans
@@ -54,5 +75,25 @@
                         &trans &trans &trans   &trans &trans &mo DEFAULT
                         >;
                 };
+
+                nav_layer_b {
+                        bindings = <
+   &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans &trans    &trans &trans
+   &trans &trans &trans &trans &trans &trans   &kp HOME  &kp PG_DN  &kp PG_UP &kp END &trans &trans
+   &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans &trans    &trans &trans
+                        &trans &trans &trans   &trans &trans &mo DEFAULT
+                        >;
+                };
+
+                gaming_layer {
+                        bindings = <
+   &kp ESC   &kp Q &kp W &kp E  &kp R &kp T  &kp Y &kp U  &kp I     &kp O   &kp P    &kp DEL
+   &kp TAB   &kp A &kp S &kp D  &kp F &kp G  &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
+   &kp LSHIFT &kp Z &kp X &kp C  &kp V &kp B  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &sk RALT
+             &kp LCTRL &kp SPACE &lt NUMBERS   &lt SYMBOL &kp LSHIFT &kp BKSP
+                        >;
+                };
+
+
         };
 };
