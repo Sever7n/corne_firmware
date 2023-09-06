@@ -11,9 +11,10 @@
 #define DEFAULT 0
 #define NUMBERS 1
 #define SYMBOL  2
-#define GAME    4
+#define GAME    5
 
 #define ARROWS  &lt 3 F
+#define PAGE    &lt 4 D 
 
 / {
     combos {
@@ -25,12 +26,18 @@
             layers = <DEFAULT>;
             bindings = <&bootloader>;
         };
-        combo_game {
+        combo_togame {
             timeout-ms = <50>;
             key-positions = <38 39>;
-            layers = <DEFAULT GAME>;
-            bindings = <&tog GAME>;
-        };   
+            layers = <DEFAULT>;
+            bindings = <&mo GAME>;
+        }; 
+        combo_fromgame {
+            timeout-ms = <50>;
+            key-positions = <38 39>;
+            layers = <GAME>;
+            bindings = <&mo DEFAULT>;
+        }; 
     };
 };
 
@@ -40,7 +47,7 @@
 
                 default_layer {
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp E  &kp R &kp T  &kp Y &kp U  &kp I     &kp O   &kp P    &sl GAME
+   &kp ESC   &kp Q &kp W &kp E  &kp R &kp T  &kp Y &kp U  &kp I     &kp O   &kp P    &key_repeat
    &kp TAB   &kp A &kp S PAGE   ARROWS &kp G  &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
    &sk LCTRL &kp Z &kp X &kp C  &kp V &kp B  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &sk RALT
              &sk LGUI &kp SPACE &sl SYMBOL   &sl NUMBERS &sk LSHIFT &kp BKSP
@@ -74,6 +81,15 @@
                         >;
                 };
                 
+                nav_layer_b {
+                        bindings = <
+   &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans &trans    &trans &trans
+   &trans &trans &trans &trans &trans &trans   &kp HOME  &kp PG_DN  &kp PG_UP &kp END &trans &trans
+   &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans &trans    &trans &trans
+                        &trans &trans &trans   &trans &trans &mo DEFAULT
+                        >;
+                };
+
                 game_layer {
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E  &kp R &kp T  &kp Y &kp U  &kp I     &kp O   &kp P    &key_repeat
