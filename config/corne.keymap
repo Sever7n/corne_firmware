@@ -12,11 +12,8 @@
 #define NUMBERS 1
 #define SYMBOL  2
 #define NAV     3
-#define PAGE    4
-#define GAM     5
 
 #define ARROWS  &lt NAV F
-#define PG      &lt PAGE D
 
 // {
 //    combos {
@@ -78,23 +75,6 @@
                         >;
                 };
 
-                nav_layer_b {
-                        bindings = <
-   &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans &trans    &trans &trans
-   &trans &trans &trans &trans &trans &trans   &kp HOME  &kp PG_DN  &kp PG_UP &kp END &trans &trans
-   &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans &trans    &trans &trans
-                        &trans &trans &trans   &trans &trans &mo DEFAULT
-                        >;
-                };
-
-                gaming_layer {
-                        bindings = <
-   &kp ESC   &kp Q &kp W &kp E  &kp R &kp T  &kp Y &kp U  &kp I     &kp O   &kp P    &kp DEL
-   &kp TAB   &kp A &kp S &kp D  &kp F &kp G  &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
-   &kp LSHIFT &kp Z &kp X &kp C  &kp V &kp B  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &sk RALT
-             &kp LCTRL &kp SPACE &lt NUMBERS   &lt SYMBOL &kp LSHIFT &kp BKSP
-                        >;
-                };
 
 
         };
