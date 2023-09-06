@@ -11,9 +11,9 @@
 #define DEFAULT 0
 #define NUMBERS 1
 #define SYMBOL  2
-#define NAV     3
 
-#define ARROWS  &lt NAV F
+#define ARROWS  &lt 3 F
+#define PAGE    &lt 4 D 
 
 / {
     combos {
@@ -34,7 +34,7 @@
                 default_layer {
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E  &kp R &kp T  &kp Y &kp U  &kp I     &kp O   &kp P    &key_repeat
-   &kp TAB   &kp A &kp S &kp D  ARROWS &kp G  &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
+   &kp TAB   &kp A &kp S PAGE   ARROWS &kp G  &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
    &sk LCTRL &kp Z &kp X &kp C  &kp V &kp B  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &sk RALT
              &sk LGUI &kp SPACE &sl SYMBOL   &sl NUMBERS &sk LSHIFT &kp BKSP
                         >;
@@ -62,6 +62,15 @@
                         bindings = <
    &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans &trans    &trans &trans
    &trans &trans &trans &trans &trans &trans   &kp LEFT  &kp DOWN  &kp UP &kp RIGHT &trans &trans
+   &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans &trans    &trans &trans
+                        &trans &trans &trans   &trans &trans &mo DEFAULT
+                        >;
+                };
+                
+                nav_layer_b {
+                        bindings = <
+   &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans &trans    &trans &trans
+   &trans &trans &trans &trans &trans &trans   &kp HOME  &kp PG_DN  &kp PG_UP &kp END &trans &trans
    &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans &trans    &trans &trans
                         &trans &trans &trans   &trans &trans &mo DEFAULT
                         >;
