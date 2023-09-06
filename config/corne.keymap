@@ -30,13 +30,13 @@
             timeout-ms = <50>;
             key-positions = <38 39>;
             layers = <DEFAULT>;
-            bindings = <&mo GAME>;
+            bindings = <&to GAME>;
         }; 
         combo_fromgame {
             timeout-ms = <50>;
             key-positions = <38 39>;
             layers = <GAME>;
-            bindings = <&mo DEFAULT>;
+            bindings = <&to DEFAULT>;
         }; 
     };
 };
