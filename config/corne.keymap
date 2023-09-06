@@ -11,32 +11,32 @@
 #define DEFAULT 0
 #define NUMBERS 1
 #define SYMBOL  2
-#define NAV1    3
-#define NAV2    4
+#define NAV     3
+#define PAGE    4
 #define GAM     5
 
-#define ARROWS  &lt NAV1 F
-#define PG      &lt NAV2 D
+#define ARROWS  &lt NAV F
+#define PG      &lt PAGE D
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_boot {
-            timeout-ms = <50>;   
-            key-positions = <0 11>;
-            layers = <GAM>;
-            bindings = <&bootloader>;
-        };
-
-        combo_gaming {
-            timeout-ms = <50>;   
-            key-positions = <38 39>;
-            layers = <DEFAULT GAM>
-            bindings = <&tog 5>;
-        };
-    };
-};
+// {
+//    combos {
+//        compatible = "zmk,combos";
+//
+//        combo_boot {
+//            timeout-ms = <50>;   
+//            key-positions = <0 11>;
+//            layers = <GAM>;
+//            bindings = <&bootloader>;
+//        };
+//
+//        combo_gaming {
+//            timeout-ms = <50>;   
+//            key-positions = <38 39>;
+//            layers = <DEFAULT GAM>
+//            bindings = <&tog GAM>;
+//        };
+//    };
+//};
 
 / {
         keymap {
