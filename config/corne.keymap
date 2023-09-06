@@ -26,18 +26,18 @@
             layers = <DEFAULT>;
             bindings = <&bootloader>;
         };
-        combo_togame {
-            timeout-ms = <50>;
-            key-positions = <38 39>;
-            layers = <DEFAULT>;
-            bindings = <&mo GAME>;
-        }; 
-        combo_fromgame {
-            timeout-ms = <50>;
-            key-positions = <38 39>;
-            layers = <GAME>;
-            bindings = <&mo DEFAULT>;
-        }; 
+//        combo_togame {
+//            timeout-ms = <50>;
+//            key-positions = <38 39>;
+//            layers = <DEFAULT>;
+//            bindings = <&mo GAME>;
+//        }; 
+//        combo_fromgame {
+//            timeout-ms = <50>;
+//            key-positions = <38 39>;
+//            layers = <GAME>;
+//            bindings = <&mo DEFAULT>;
+//        }; 
     };
 };
 
