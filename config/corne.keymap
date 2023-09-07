@@ -12,6 +12,7 @@
 #define NUMBERS 1
 #define SYMBOL  2
 #define GAME    5
+#define NUMPAD  6
 
 #define ARROWS  &lt 3 F
 #define PAGE    &lt 4 D 
@@ -23,20 +24,12 @@
         combo_boot {
             timeout-ms = <50>;   
             key-positions = <0 11>;
-            layers = <DEFAULT>;
             bindings = <&bootloader>;
         };
-        combo_togame {
+        combo_game {
             timeout-ms = <50>;
             key-positions = <38 39>;
-            layers = <DEFAULT>;
-            bindings = <&to GAME>;
-        }; 
-        combo_fromgame {
-            timeout-ms = <50>;
-            key-positions = <38 39>;
-            layers = <GAME>;
-            bindings = <&to DEFAULT>;
+            bindings = <&tog GAME>;
         }; 
     };
 };
@@ -77,16 +70,16 @@
    &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans &trans    &trans &trans
    &trans &trans &trans &trans &trans &trans   &kp LEFT  &kp DOWN  &kp UP &kp RIGHT &trans &trans
    &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans &trans    &trans &trans
-                        &trans &trans &trans   &trans &trans &mo DEFAULT
+                        &trans &trans &trans   &trans &trans &trans
                         >;
                 };
                 
                 nav_layer_b {
                         bindings = <
-   &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans &trans    &trans &trans
-   &trans &trans &trans &trans &trans &trans   &kp HOME  &kp PG_DN  &kp PG_UP &kp END &trans &trans
-   &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans &trans    &trans &trans
-                        &trans &trans &trans   &trans &trans &mo DEFAULT
+   &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans    &trans  &trans &trans
+   &trans &trans &trans &trans &trans &trans   &kp HOME  &kp PG_DN &kp PG_UP &kp END &trans &trans
+   &trans &trans &trans &trans &trans &trans   &trans    &trans    &trans    &trans  &trans &trans
+                        &trans &trans &trans   &trans &trans &trans
                         >;
                 };
 
@@ -94,8 +87,17 @@
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E  &kp R &kp T  &kp Y &kp U  &kp I     &kp O   &kp P    &key_repeat
    &kp TAB   &kp A &kp S &kp D  &kp F &kp G  &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
-   &kp LCTRL &kp Z &kp X &kp C  &kp V &kp B  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RALT
-             &kp LGUI &kp SPACE &mo SYMBOL   &mo NUMBERS &kp LSHIFT &kp BKSP
+   &kp LSHIFT &kp Z &kp X &kp C  &kp V &kp B  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RALT
+             &kp LCTRL &kp SPACE &mo NUMPAD   &mo SYMBOL &kp LSHIFT &kp BKSP
+                        >;
+                };
+
+                numpad_layer {
+                        bindings = <
+   &trans &trans &kp N1 &kp N2 &kp N3 &trans   &trans  &kp F1 &kp F2 &kp F3 &kp F4 &trans
+   &trans &kp N0 &kp N4 &kp N5 &kp N6 &trans   &trans  &kp F5 &kp F6 &kp F7 &kp F8 &trans
+   &trans &trans &kp N7 &kp N8 &kp N9 &trans   &trans  &kp F9 &kp F10 &kp F11 &kp F12 &trans
+                        &trans &trans &trans   &trans &trans &trans
                         >;
                 };
 
