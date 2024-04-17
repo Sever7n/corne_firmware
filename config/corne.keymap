@@ -14,6 +14,10 @@
 #define GAME    5
 #define NUMPAD  6
 
+&sk {
+    quick-release;
+}
+
 / {
     combos {
         compatible = "zmk,combos";
