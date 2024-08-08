@@ -8,6 +8,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define HOST_OS 1
+#include "zmk-helpers/helper.w"
+#include "zmk-helpers/unicode-chars/german.dtsi"
+
 #define DEFAULT 0
 #define NUMBERS 1
 #define SYMBOL  2
@@ -41,9 +45,9 @@
 
                 default_layer {
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp E  &kp R &kp T  &kp Y &kp U  &kp I     &kp O   &kp P    &key_repeat
-   &kp TAB   &kp A &kp S &lt 4 D   &lt 3 F &kp G  &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
-   &sk LCTRL &kp Z &kp X &kp C  &kp V &kp B  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &sk RALT
+   &kp ESC   &kp Q           &kp W               &kp E   &kp R &kp T   &kp Y &ht_tp &de_ue s  &kp I     &ht_tp de_oe o   &kp P    &key_repeat
+   &kp TAB   &ht_tp &de_ae A &ht_tp &de_eszett S &lt 4 D &lt 3 F &kp G &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
+   &sk LCTRL &kp Z           &kp X               &kp C   &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &sk RALT
              &sk LGUI &kp SPACE &sl SYMBOL   &sl NUMBERS &sk LSHIFT &kp BKSP
                         >;
                 };
@@ -52,7 +56,7 @@
                         bindings = <
    &trans    &kp F1  &kp F2  &kp F3 &kp F4   &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &trans
    &trans    &kp N1  &kp N2  &kp N3 &kp N4   &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0  &trans
-   &trans    &kp F11 &kp F12 &none  &none    &none  &none  &none  &none  &none  &none   &trans
+   &trans    &kp F11 &kp F12 &none  &none    &none  &none  &none  &trans &trans &none   &trans
                          &trans &trans &trans    &trans  &trans  &trans
                         >;
                 };
@@ -95,8 +99,8 @@
 
                 numpad_layer {
                         bindings = <
-   &trans &trans &kp N1 &kp N2 &kp N3 &trans   &trans  &kp F1 &kp F2 &kp F3 &kp F4 &trans
-   &trans &kp N0 &kp N4 &kp N5 &kp N6 &trans   &trans  &kp F5 &kp F6 &kp F7 &kp F8 &trans
+   &trans &trans &kp N1 &kp N2 &kp N3 &trans   &trans  &kp F1 &kp F2  &kp F3  &kp F4  &trans
+   &trans &kp N0 &kp N4 &kp N5 &kp N6 &trans   &trans  &kp F5 &kp F6  &kp F7  &kp F8  &trans
    &trans &trans &kp N7 &kp N8 &kp N9 &trans   &trans  &kp F9 &kp F10 &kp F11 &kp F12 &trans
                         &trans &trans &trans   &trans &trans &trans
                         >;
