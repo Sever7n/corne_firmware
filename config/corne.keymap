@@ -22,6 +22,34 @@
     quick-release;
 };
 
+ZMK_BEHAVIOR(ae, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <125>;
+    bindings = <&kp>, <&de_ae>;
+)
+
+ZMK_BEHAVIOR(oe, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <125>;
+    bindings = <&kp>, <&de_oe>;
+)
+
+ZMK_BEHAVIOR(ue, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <125>;
+    bindings = <&kp>, <&de_ue>;
+)
+
+ZMK_BEHAVIOR(eszett, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <125>;
+    bindings = <&kp>, <&de_eszett>;
+)
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -45,9 +73,9 @@
 
                 default_layer {
                         bindings = <
-   &kp ESC   &kp Q           &kp W               &kp E   &kp R &kp T   &kp Y &ht_tp &de_ue s  &kp I     &ht_tp de_oe o   &kp P    &key_repeat
-   &kp TAB   &ht_tp &de_ae A &ht_tp &de_eszett S &lt 4 D &lt 3 F &kp G &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
-   &sk LCTRL &kp Z           &kp X               &kp C   &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &sk RALT
+   &kp ESC   &kp Q &kp W     &kp E   &kp R &kp T   &kp Y &ue U  &kp I     &oe O   &kp P    &key_repeat
+   &kp TAB   &ae A &eszett S &lt 4 D &lt 3 F &kp G &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
+   &sk LCTRL &kp Z &kp X     &kp C   &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &sk RALT
              &sk LGUI &kp SPACE &sl SYMBOL   &sl NUMBERS &sk LSHIFT &kp BKSP
                         >;
                 };
